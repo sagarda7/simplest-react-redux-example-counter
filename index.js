@@ -5,10 +5,10 @@ import {connect, Provider} from 'react-redux'
 
 
 //reducer
-const counterReducer = (state={count: 0, name:'sagar'}, action) => {
+const counterReducer = (state={count: 0}, action) => {
   switch(action.type) {
     case 'INCREMENT':
-      reObject.assign({}, {count: state.count+1})
+      return Object.assign({}, {count: state.count+1})
     case 'DECREMENT':
       return Object.assign({}, {count: state.count-1})
     default: 
